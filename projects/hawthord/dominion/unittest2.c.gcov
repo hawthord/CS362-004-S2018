@@ -1,0 +1,35 @@
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:unittest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        -:    7://test function buyCard()
+        1:    8:int main(int argc, char ** argv){
+        -:    9:	struct gameState G;
+        1:   10:	int result, rando = 0;
+        1:   11:	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+        1:   12:	rando = rand() % 10;
+        1:   13:	result = initializeGame(2, k, rando, &G);
+        1:   14:	assert(result == 0);
+        1:   15:	printf("Unittest 2:\n");
+        -:   16:	
+        1:   17:	G.coins = 5;
+        1:   18:	G.numBuys = 2;
+        -:   19:	
+        -:   20:	//Testing multiple bad inputs
+        1:   21:	result = buyCard(-2, &G);
+        1:   22:	assert(result == -1);
+        -:   23:	
+        -:   24:	//testing multiple good inputs
+        1:   25:	result = buyCard(2, &G);
+        1:   26:	assert(result == 0);
+        -:   27:	
+        1:   28:	printf("TEST SUCCESSFULLY COMPLETED.\n");
+        1:   29:	return 0;
+        -:   30:}
