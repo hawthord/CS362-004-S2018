@@ -15,11 +15,11 @@ int main (int argc, char** argv) {
 	printf("Card Test 2:\n");
 	
 	//test invalid input, invalid player hand position
-	result = cardSmithy(&G, 6, 1);	//handPos	?
+	result = smithyCard(&G, 6);
 	assert(result == 0);
 	
 	//test valid input
-	result = cardSmithy(&G, 1, 1);	//handPos	?
+	result = smithyCard(&G, 1);
 	assert(result == 0);
 	
 	printf("TEST SUCCESSFULLY COMPLETED.\n");

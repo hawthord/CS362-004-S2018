@@ -14,7 +14,6 @@ int main (int argc, char** argv) {
 	assert(result == 0);
 	printf("Card Test 4:\n");
 	
-	/*
 	//test invalid input, no options selected
 	result = stewardCard(&G, 1, 0, 0, 0);
 	assert(result == 0);
@@ -42,13 +41,11 @@ int main (int argc, char** argv) {
 	//test valid input, choice 2, +2 coin
 	result = stewardCard(&G, 1, 0, 1, 0);
 	assert(result == 0);
-
+	
 	//test valid input, choice 3, trash two cards
 	result = stewardCard(&G, 1, 0, 0, 1);
 	assert(result == 0);
-	*/
 	
 	printf("TEST SUCCESSFULLY COMPLETED.\n");
 	return 0;
-
 }

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 //test function getCost()
-int getCost(int);
+//int getCost(int);
 int main(int argc, char ** argv){
 	struct gameState G;
 	int result, value, rando = 0;
